@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import './App.css'
+import {Button, Container, Header} from "semantic-ui-react"
+import { styles } from 'ansi-colors';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+class App extends Component {
 
-export default App;
+  // state = {
+  //   rpc: [
+  //     {id: 1, name: "rock", },
+  //     {id: 2, name: "scissors",},
+  //     {id: 3, name: "paper",},
+  //   ]
+
+  render = () => {
+return(
+ 
+ 
+  <Container style={styles.container} textAlign="center">
+    <Header as="h1"> Rock, Paper, Scissors!! </Header>
+
+      <Button size="" onClick="rock">Rock
+      </Button >
+
+      <Button onClick="Paper">Paper
+      </Button >
+
+      <Button onClick="Scissors">Scissors
+      </Button >
+
+  </Container>
+   )
+  }
+
+  }
+
+  
+
+
+
+
+export default App
